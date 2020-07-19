@@ -23,6 +23,6 @@ module.exports = {
   siteMetadata: {
     title: 'Sabrina Andres - Los Angeles Art Consultant',
     description:
-      'Sabrina Andres offers Art Consulting services in the Los Angeles and Pasadena area, contact her today to find up and coming',
+      'Sabrina Andres offers Art Consulting services in the Los Angeles and Pasadena area, contact her today to find up and coming artists',
   },
 };
