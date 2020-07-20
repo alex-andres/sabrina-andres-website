@@ -16,10 +16,8 @@ const Layout = ({ children }) => {
         box-sizing: border-box;
         margin: 0;
       }
-${'' /* 
-      * + * {
-        margin-top: 1rem;
-      } */}
+
+     
       html{
         scroll-behavior: smooth;
       }
@@ -64,7 +62,11 @@ ${'' /*
       li {
         margin-top: .25rem;
       }
-
+      main{
+         * + * {
+        margin-top: 1rem;
+      }
+      }
 
     `}
       />

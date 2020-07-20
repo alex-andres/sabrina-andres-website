@@ -1,7 +1,17 @@
+const path = require(`path`);
 module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'static', 'images'),
+      },
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -9,14 +19,6 @@ module.exports = {
           families: ['Playfair Display', 'Raleway'],
           urls: ['/fonts/fonts.css'],
         },
-      },
-    },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'WPGraphQL',
-        fieldName: 'wpgraphql',
-        url: 'http://localhost/graphql',
       },
     },
   ],
