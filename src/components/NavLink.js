@@ -15,6 +15,7 @@ const NavLink = styled(Link)`
 
   &.current-page {
     border-bottom: 2px solid ${colors.black};
+    margin-top: 6.5px;
     margin-bottom: 0.25rem;
   }
   &:hover {

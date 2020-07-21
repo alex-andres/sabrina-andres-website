@@ -27,6 +27,7 @@ const About = () => {
           grid-gap: 30px;
           @media (max-width: 800px) {
             grid-template-areas: 'heading' 'main' 'img';
+            grid-gap: 30px;
           }
         `}
       >
@@ -44,6 +45,12 @@ const About = () => {
             grid-area: main;
           `}
         >
+          <Img
+            css={css`
+              margin-bottom: 1rem;
+            `}
+            fluid={image.image.sharp.fluid}
+          />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
             numquam et, vitae ducimus voluptatum molestias, ratione nostrum
@@ -66,9 +73,7 @@ const About = () => {
             css={css`
               grid-area: img;
             `}
-          >
-            <Img fluid={image.image.sharp.fluid} />
-          </div>
+          ></div>
         </div>
       </div>
     </Layout>
