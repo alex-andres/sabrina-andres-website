@@ -32,8 +32,16 @@ module.exports = {
     },
   ],
   siteMetadata: {
+    siteUrl: 'https://sabrinandres.com',
     title: 'Sabrina Andres - Los Angeles Art Consultant',
+    titleAlt: 'Sabrina Andres Art Consultant',
     description:
       'Sabrina Andres offers Art Consulting services in the Los Angeles and Pasadena area, contact her today to find up and coming artists',
+    banner: '/logos/logo.png',
+    headline:
+      'Portfolio and Contact site of Sabrina Andres, Los Angeles based Art Consultant',
+    siteLanguage: 'en',
+    ogLanguage: 'en_US',
+    author: 'Alex Andres',
   },
 };

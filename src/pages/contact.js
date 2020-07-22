@@ -51,7 +51,7 @@ export default () => (
           </p>
           <p>
             <label>
-              Message: <textarea name="message"></textarea>
+              Messeosage: <textarea name="message"></textarea>
             </label>
           </p>
           <p>
