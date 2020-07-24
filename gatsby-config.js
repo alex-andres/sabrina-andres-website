@@ -45,6 +45,16 @@ module.exports = {
         analyzerMode: 'static',
       },
     },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'sab_rina_n',
+        access_token: process.env.INSTAGRAM_API_KEY,
+        instagram_id: process.env.INSTAGRAM_APP_ID,
+        paginate: 100,
+        maxPosts: 100,
+      },
+    },
   ],
   siteMetadata: {
     siteUrl: 'https://sabrinandres.com',
