@@ -6,6 +6,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

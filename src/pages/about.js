@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
+// import SEO from '../components/SEO/seo';
 
 const About = () => {
   const image = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ const About = () => {
   `);
   return (
     <Layout>
+      {/* <SEO title="" description="" image="" pathname="" /> */}
       <div
         css={css`
           display: grid;

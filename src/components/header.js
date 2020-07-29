@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 import NavLink from '../components/NavLink';
 import NavButton from '../components/NavButton';
 import { colors } from '../components/theme';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 const Header = () => {
   const [menuState, _setMenuState] = React.useState(false);
@@ -13,9 +14,15 @@ const Header = () => {
     _setMenuState(data);
   };
 
-  // const listener = () => {
-  //   console.log(`state : ${menu}`);
-  // };
+  const [hideOnScroll, setHideOnScroll] = useState(true);
+
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const isShow = currPos.y > prevPos.y;
+      if (isShow !== hideOnScroll) setHideOnScroll(isShow);
+    },
+    [hideOnScroll],
+  );
 
   return (
     <header
@@ -32,7 +39,6 @@ const Header = () => {
         box-shadow: none;
         position: sticky;
         top: 0;
-        box-shadow: 0px 3px 15px ${colors.midGray};
         transition: box-shadow 0.5s;
         @media (max-width: 800px) {
           position: static;
@@ -52,6 +58,9 @@ const Header = () => {
           justify-content: center;
           align-items: center;
         }
+        box-shadow: ${hideOnScroll ? 'none' : `0px 3px 15px ${colors.midGray}`};
+        transition: height 400ms ${hideOnScroll ? 'ease-in' : 'ease-out'};
+        height: ${hideOnScroll ? '150px' : '100px'};
       `}
     >
       {/* site name */}
