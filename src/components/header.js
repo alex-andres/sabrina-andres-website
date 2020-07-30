@@ -55,11 +55,13 @@ const Header = () => {
           background: ${colors.white};
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
+          padding-top: 4rem;
+          transition: position ease-in 4s;
         }
         box-shadow: ${hideOnScroll ? 'none' : `0px 3px 15px ${colors.midGray}`};
-        transition: height 400ms ${hideOnScroll ? 'ease-in' : 'ease-out'};
+        transition: height 0.4s ${hideOnScroll ? 'ease-in' : 'ease-out'};
         height: ${hideOnScroll ? '150px' : '100px'};
       `}
     >
@@ -86,24 +88,40 @@ const Header = () => {
           width: 60px;
           border: none;
           background: none;
+          transition: 0.2s;
+          svg {
+            .rec-1 {
+              transform-origin: 17px;
+              transform: rotate(0deg);
+              transition: 0.2s;
+            }
+            .rec-2 {
+              transform-origin: 51px;
+              transform: rotate(0deg);
+              transition: 0.2s;
+            }
+          }
+          &:focus {
+            outline: none;
+          }
           @media (min-width: 800px) {
             display: none;
           }
           &[aria-expanded='true'] {
             display: inline-block;
             position: absolute;
-            top: 10px;
-            right: 0;
+            top: 60px;
+            right: 60px;
             z-index: 10000;
             transition: 0.2s;
             svg {
               .rec-1 {
-                transform-origin: 1px;
+                transform-origin: 17px;
                 transform: rotate(45deg);
                 transition: 0.2s;
               }
               .rec-2 {
-                transform-origin: 33px;
+                transform-origin: 51px;
                 transform: rotate(-45deg);
                 transition: 0.2s;
               }
