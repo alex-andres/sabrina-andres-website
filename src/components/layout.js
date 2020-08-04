@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Header from '../components/header';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 import Footer from '../components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -84,7 +85,7 @@ const Layout = ({ children }) => {
         css={css`
           margin: 2rem auto 4rem;
           max-width: 90vw;
-          width: 550px;
+          ${'' /* width: 550px; */}
           flex: 1 0 auto;
           min-height: calc(100vh - 90px - 187px);
         `}
