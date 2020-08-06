@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import Header from '../components/header';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 import Footer from '../components/footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();

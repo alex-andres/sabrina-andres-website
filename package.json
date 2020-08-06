@@ -18,7 +18,6 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@n8tb1t/use-scroll-position": "^1.0.43",
-    "bootstrap": "^4.5.0",
     "emotion-theming": "^10.0.27",
     "gatsby": "^2.18.6",
     "gatsby-background-image": "^1.1.1",
@@ -27,6 +26,7 @@
     "gatsby-plugin-manifest": "^2.4.20",
     "gatsby-plugin-preload-fonts": "^1.2.19",
     "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-web-font-loader": "^1.0.4",
@@ -35,10 +35,12 @@
     "gatsby-source-graphql": "^2.5.7",
     "gatsby-source-instagram": "^0.8.0",
     "gatsby-transformer-sharp": "^2.5.11",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "swiper": "^6.1.1",
     "typescript": "^3.9.2"
   },
   "devDependencies": {

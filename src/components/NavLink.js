@@ -12,7 +12,7 @@ const NavLink = styled(Link)`
   font-weight: 300;
   padding: 0.25em;
   margin: 0 1rem;
-  transition: 0.5s;
+  transition: all 0.5s;
 
   &.current-page {
     border-bottom: 2px solid ${colors.black};
@@ -20,7 +20,7 @@ const NavLink = styled(Link)`
     margin-bottom: 0.25rem;
   }
   &:hover {
-    transition: 0.5s;
+    transition: all 0.5s;
     color: ${colors.midGray};
   }
 `;

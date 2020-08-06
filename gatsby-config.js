@@ -6,7 +6,8 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
-    `gatsby-plugin-preload-fonts`,
+    'gatsby-plugin-preload-fonts',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -54,6 +55,13 @@ module.exports = {
         instagram_id: process.env.INSTAGRAM_APP_ID,
         paginate: 100,
         maxPosts: 100,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `backgrounds`,
+        path: path.join(__dirname, 'static', 'images', 'header'), // wherever background images are stored
       },
     },
   ],
