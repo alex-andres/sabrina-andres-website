@@ -1,23 +1,24 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/core';
+import ReactCSSTransitionGroup from 'react-transition-group';
 import Img from 'gatsby-image';
 import Button from './Button';
 
 const Hero = () => {
-  const [index, setIndex] = React.useState(0);
+  // const [index, setIndex] = React.useState(0);
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      if (index === 2) {
-        // total number of images minus 1
-        setIndex(0);
-      } else {
-        setIndex(prev => prev + 1);
-      }
-    }, 3000); //duration
-    return () => clearInterval(timer); //cleanup
-  }, [index]); //compare
+  // React.useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     if (index === 2) {
+  //       // total number of images minus 1
+  //       setIndex(0);
+  //     } else {
+  //       setIndex(prev => prev + 1);
+  //     }
+  //   }, 3000); //duration
+  //   return () => clearInterval(timer); //cleanup
+  // }, [index]); //compare
 
   const allImagesQuery = graphql`
     query {
@@ -61,11 +62,11 @@ const Hero = () => {
           grid-area: slider;
           width: 100%;
           height: 100%;
-          transition: ease-in;
         `}
-        fluid={images[index].node.childImageSharp.fluid}
+        fluid={images[0].node.childImageSharp.fluid}
         alt="Interior"
         fadeIn="true"
+        key={images[0].node.id}
       />
       <div
         className="claim-cta-wrapper"
