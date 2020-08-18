@@ -1,4 +1,9 @@
 const path = require(`path`);
+const dotenv = require('dotenv');
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
+}
 module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
@@ -8,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-preload-fonts',
     'gatsby-plugin-sass',
+    '@contentful/gatsby-transformer-contentful-richtext',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -29,6 +35,14 @@ module.exports = {
         path: path.join(__dirname, 'static', 'images'),
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'e5lecj7msodu',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -54,7 +68,8 @@ module.exports = {
         access_token: process.env.INSTAGRAM_API_KEY,
         instagram_id: process.env.INSTAGRAM_APP_ID,
         paginate: 100,
-        maxPosts: 100,
+        maxPosts: 1000,
+        hashtags: true,
       },
     },
     {
