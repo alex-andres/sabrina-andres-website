@@ -2,3 +2,4 @@
   from = "/*"
   to = "/under-construction"
   status = 302
+  force = true
