@@ -89,7 +89,7 @@ const Hero = () => {
         >
           Sabrina takes the hard work out of finding new and emerging artists
         </p>
-        <Button to="/contact">View Projects</Button>
+        <Button to="/projects">View Projects</Button>
       </div>
     </div>
   );

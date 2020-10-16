@@ -5,7 +5,7 @@ const NumbersSection = () => {
   return (
     <section
       css={css`
-        margin-top: 4rem;
+        margin: 121px 0 0 0;
         display: flex;
         justify-content: center;
       `}

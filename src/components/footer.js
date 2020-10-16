@@ -33,7 +33,9 @@ const Footer = () => (
         }
       `}
     >
-      <h2>Sabrina Andres</h2>
+      <NavLink to="/">
+        <h2>Sabrina Andres</h2>
+      </NavLink>
       <address
         css={css`
           margin-top: 1rem;

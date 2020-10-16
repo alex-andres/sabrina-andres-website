@@ -12,6 +12,8 @@ const Layout = ({ children }) => {
     <>
       <Global
         styles={css`
+
+      @import url("https://use.typekit.net/qmg7rbf.css");  
       * {
         box-sizing: border-box;
         margin: 0;
@@ -74,17 +76,13 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <description>{description}</description>
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/qmg7rbf.css"
-        ></link>
+        <link rel="stylesheet" href="https://use.typekit.net/qmg7rbf.css"/>
       </Helmet>
       <Header />
       <main
         css={css`
           margin: 2rem auto 4rem;
           max-width: 90vw;
-          ${'' /* width: 550px; */}
           flex: 1 0 auto;
           min-height: calc(100vh - 90px - 187px);
         `}

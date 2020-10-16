@@ -10,10 +10,10 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-preload-fonts',
     'gatsby-plugin-sass',
-    '@contentful/gatsby-transformer-contentful-richtext',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -1,39 +1,28 @@
 const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
+
+module.exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
-  const blogPost = path.resolve('src/templates/blog-post-contentful.js');
-  return graphql(`
-    {
-      allContentfulPost {
-        edges {
+  const projectTemplate = path.resolve("./src/templates/project-post-contentful.js");
+  const response = await graphql(`
+    query {
+      allContentfulProject  {
+        edges{
           node {
             slug
-            title
           }
-        }
+        }  
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      throw result.errors;
-    }
-    const posts = result.data.allContentfulPost.edges;
-
-    posts.forEach((post, index) => {
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
-
-      createPage({
-        path: post.node.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.slug,
-          previous,
-          next,
-        },
-      });
+  `)  
+  response.data.allContentfulProject.edges.forEach( edge => {
+    createPage({
+      component: projectTemplate, 
+      path: `/projects/${edge.node.slug}/`,
+      context: {
+        slug: edge.node.slug,
+      }
     });
-  });
-};
+  })
+}
+
